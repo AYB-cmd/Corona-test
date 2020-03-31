@@ -1,0 +1,35 @@
+{
+  "name": "corona-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss dist/css/style.css -w",
+    "server": "live-server --port=8181 --browser=chrome",
+    "start": "concurrently \"npm run server\" \"npm run watch:sass\"",
+
+    "compiler:sass": "node-sass sass/main.scss dist/css/style.comp.css",
+    "prefix:css": "postcss dist/css/style.comp.css --use autoprefixer -o dist/css/style.prefix.css",
+    "compress:css": "node-sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
+    "building": "npm-run-all compiler:sass  prefix:css compress:css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AYB-cmd/Corona-test.git"
+  },
+  "author": "Ayoub EL Jelladi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AYB-cmd/Corona-test/issues"
+  },
+  "homepage": "https://github.com/AYB-cmd/Corona-test#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "concat": "^1.0.3",
+    "concurrently": "^5.1.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  }
+}
