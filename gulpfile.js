@@ -6,7 +6,7 @@ var gulp = require("gulp"),
     jshint = require('gulp-jshint'),
     imagemin = require('gulp-imagemin'),
     connect = require('gulp-connect');
-
+    
 gulp.task("sass", () => {
     return gulp.src("./app/sass/*.scss")
     .pipe(sass().on('error',sass.logError))

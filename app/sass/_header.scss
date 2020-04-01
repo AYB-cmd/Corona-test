@@ -1,5 +1,4 @@
-$blue : #D0E5F0;
-$dark-blue : #1A519E;
+
 
 body {
     font-family: 'Spicy Rice', cursive;
@@ -16,7 +15,7 @@ body {
         font-size:2em ;
         .banner {
             display: table;
-            background: url(/dist/img/panner.png);
+            background: url(../img/panner.png);
             background-size: cover;
             margin: 0 auto;
             width: 90%;
@@ -39,7 +38,7 @@ body {
                 display: table-cell;
                 vertical-align: middle;
                 right: 0px;
-                .items {
+                &__items {
                     
                     font-size: 1.5em;
                     margin: 0 1em;
@@ -64,12 +63,12 @@ body {
                             color: white;
                         }
                         &:link {
-                            background-color: ;
-                            color: green;
+                            
                         }
                     }
                 }
             }
         }
     }
+    
 }
