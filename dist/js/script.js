@@ -1,0 +1,1 @@
+var x=1,y=2;function concat(o,c){return o+c}console.log(concat(x,y)),console.log("it works");
