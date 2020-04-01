@@ -16,7 +16,7 @@ gulp.task("sass", () => {
     .pipe(connect.reload())
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', () => {
     return gulp.src('./app/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -24,19 +24,19 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./dist/js'))
 });
 
-gulp.task('images', function() {
+gulp.task('images', () => {
     return gulp.src('app/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/img'))
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
     gulp.watch('app/sass/*.scss', gulp.series('sass'));
     gulp.watch('app/js/*.js', gulp.series('scripts'));
     gulp.watch('app/img/*', gulp.series('images'));
 });
 
-gulp.task('connect', function() {
+gulp.task('connect', () => {
     connect.server({
       root: 'dist', 
       livereload: true
