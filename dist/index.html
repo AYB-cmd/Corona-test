@@ -6,46 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corona test</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/solid.min.js">
-    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header >
+    <header>
         <nav>
-            <div class="banner">
-                <a class="logo" href=""><img src="./img/logo.png" alt=""></a>
-                <ul class="menu">
-                    <li class="menu__items"><a href="#">Conseil</i>
-                    <li class="menu__items"><a href="#">َAccueil</a></li>
+            <div class="bg">
+                <div class="banner">
+                    <a class="logo" href=""><img src="./img/logo.png" alt=""></a>
+                    <ul class="menu">
+                        <li class="menu__items"><a href="#">Conseil</i>
+                        <li class="menu__items"><a href="#">َAccueil</a></li>
 
-                    <li class="menu__items"><a href="#" id="arabic">عربي<i class="fas fa-globe"></i></a></li>
-                </ul>
+                        <li class="menu__items"><a href="#" id="arabic">عربي<i class="fas fa-globe"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="hero">
-            <div class="alert">
+            <div class="bg">
+                <div class="alert">
+                    <h6 class="alert__title">
+                        LA DERNIÈRE INFO MÉDICALE
+                    </h6>
+                    <p class="alert__description">
+                        La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur
+                        d'aggravation de
+                        l’infection. En cas de fièvre, prenez du paracétamol.
+                        N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien.
+                    </p>
 
+                </div>
             </div>
             <div class="banner">
                 <div class="img-block">
-
+                    <img class="img-block__img" src="img/doctor.png" alt="">
                 </div>
                 <div class="text-block">
-                    <div class="text-block__title"></div>
-                    <div class="text-block__description"></div>
-                    <div class="btn"></div>
-                        <button class="text-block__btn">
-
+                    <div class="text-block__title">
+                        <h1> Vous pensez avoir été exposé au
+                            Coronavirus COVID-19 et avez des symptômes ? </h1>
+                    </div>
+                    <div class="text-block__icon">
+                        <img src="img/sick.png" alt="">
+                    </div>
+                    <div class="text-block__description">
+                        <h2>Je reste vigilant ? <br>
+                            Je programme une téléconsultation ? <br> J'appelle le 15 ? <br>
+                            Faites le test pour répondre en citoyen éclairé selon vos symptômes.</h2>
+                    </div>
+                    <div class="btn">
+                        <button class="btn__pmr">
+                            Demarer le test
                         </button>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+    <section class="doctor">
+        <div class="title">
+            <h1>Quels sont les symptômes à surveiller ?</h1>
+        </div>
+
+        <div class="block">
+
+            <div class="block__photos">
+                <img class="block__photos--img" src="" alt="">
+                <p class="block__title">Fièvre</p>
+            </div>
+        
 
         
-    </header>
+            <div class="block__photos">
+                <img class="block__photos--img" src="img/Calque 2.png" alt="">
+                <p class="block__title">Nausées
+                    et vomissements</p>
+            </div>
+        </div>
 
+        <div class="block">
+            <div class="block__photos">
+                <img class="block__photos--img" src="img/Calque -1.png" alt="">
+                <p class="block__title"> Gêne
+                    respiratoire </p>
+            </div class="block__photos">
+        
+
+        
+            <div class="block__photos">
+                <img class="block__photos--img" src="img/Calque -2.png" alt="">
+                <p class="block__title">Toux et maux
+                    de gorge</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="two">
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/solid.min.js"></script>
     <script src="/dist/js/script.js"></script>
 </body>
 

@@ -1,0 +1,20 @@
+@mixin btn {
+    width: 100%;
+    background-color: $multi-blue;
+    width: 612px;
+    height: 52px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    border: none;
+    margin-top: 1em;
+    border-radius: 8px;
+    &:hover {
+        cursor: pointer;
+        background-color: $yellow;
+        transform: scale(1.3) ;
+        transition-duration: 1s;
+        
+        
+    }
+}
