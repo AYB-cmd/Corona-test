@@ -9,7 +9,7 @@ body {
         .bg {
             height: 90px;
             width: 100%;
-            
+
             .banner {
                 display: table;
 
@@ -20,7 +20,7 @@ body {
                 .logo {
                     opacity: 1;
                     height: 100%;
-                    
+
                     img {
                         height: 140%;
                         width: auto;
@@ -101,7 +101,6 @@ body {
                 width: 100%;
                 float: left;
                 &__img {
-                    
                 }
             }
             .text-block {
@@ -110,7 +109,6 @@ body {
                 width: 100%;
                 text-align: center;
                 &__title {
-                    
                     font-size: 10vmax;
                 }
                 &__icon {
@@ -127,28 +125,33 @@ body {
 
                 .btn {
                     &__pmr {
-                      @include btn;
-                        
+                        @include btn;
                     }
                 }
             }
         }
     }
-    .doctor {
+    .symptomes {
         text-align: center;
         .title {
             padding-top: 8em;
-            .block {
-                display: flex;
-                flex-direction: column;
-                &__photos {
-                    &--img {
-                        width: 100px;
-                        height: auto;
-                    }
+        }
+        .block {
+            padding-top: 8em;
+            display: flex;
+            justify-content: space-evenly;
+            &__items {
+                width: 20%;
+                height: auto;
+                text-align: center;
+                &--img {
+                    height: 50%;
+                    width: auto;
                 }
-                &__title {
-
+                &--title {
+                    max-width: 65%;
+                    min-width: 60%;
+                    margin: 0 auto;
                 }
             }
         }
