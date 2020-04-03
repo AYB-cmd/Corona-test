@@ -1,0 +1,63 @@
+body {
+    .recommand {
+        background-color: $multi-blue;
+        text-align: center;
+        .title {
+            &__text {
+                padding-top: 1em;
+                color: $light;
+            }
+        }
+        .block-top {
+            justify-content: space-around;
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+            .items {
+                padding-top: 4em;
+                &__text {
+                    text-align: left;
+                    font-size: 30px;
+                    &--color {
+                        color: black;
+                    }
+                }
+                &__win {
+                    color: $yellow;
+                }
+                &__nmr {
+                    border-radius: 10px;
+                    width: 240px;
+                    background-color: $yellow;
+                    color: $multi-blue;
+                }
+
+                &__link {
+                    font-size: 27px;
+                    color: white;
+                    text-decoration: none ;
+                    border-bottom: solid 1px $yellow;
+                }
+            }
+        }
+        .block-bot {
+            display: flex;
+            flex-direction: column;
+            background-color: $blue;
+            text-align: center;
+            &__title {
+                
+                text-align: center;
+            }
+            &__icon {
+                margin: 0 auto;
+                height: 100px;
+                 width: auto;
+                 padding-bottom: 2em;
+            }
+            &__btn {
+                @include btn;
+            }
+        }
+    }
+}

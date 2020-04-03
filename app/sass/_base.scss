@@ -1,35 +1,39 @@
-html,body {
+html,
+body {
     background: white;
     font-size: 8px;
-    font-family: 'Cairo', sans-serif;
+    font-family: "Cairo", sans-serif;
     background: white;
     color: black;
     text-decoration: none;
     font-size: 8px;
     padding: 0px;
     margin: 0px;
-h1 {
-    font-weight: bold;
-    font-size: 30px;
-    color: $multi-blue;
-    margin: 0;
-}
-h2{
-    font-weight: bold;
-    font-size: 30px;
-    margin: 0;
-}
-h6 {
-    font-weight: bold;
-    font-size: 15px;
-    padding-top: 8px;
-    margin: 0;
-}
-p {
-    font-size: 30px;
-}
-img {
-    width: 100%;
-    height: auto;
-}
+    h1 {
+        font-weight: bold;
+        font-size: 30px;
+        color: $multi-blue;
+        margin: 0;
+    }
+    h2 {
+        color: white;
+    }
+    h3 {
+        color: $grey;
+        font-size: 30px;
+        margin: 0;
+    }
+    h6 {
+        font-weight: bold;
+        font-size: 15px;
+        padding-top: 8px;
+        margin: 0;
+    }
+    p {
+        font-size: 30px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
 }

@@ -9,12 +9,11 @@
     border: none;
     margin-top: 1em;
     border-radius: 8px;
+    
     &:hover {
         cursor: pointer;
         background-color: $yellow;
         transform: scale(1.3) ;
         transition-duration: 1s;
-        
-        
     }
 }

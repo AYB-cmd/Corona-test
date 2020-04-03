@@ -1,0 +1,25 @@
+.symptomes {
+    text-align: center;
+    .title {
+        padding-top: 8em;
+    }
+    .block {
+        padding-top: 8em;
+        display: flex;
+        justify-content: space-evenly;
+        &__items {
+            width: 20%;
+            height: auto;
+            text-align: center;
+            &--img {
+                height: 50%;
+                width: auto;
+            }
+            &--title {
+                max-width: 65%;
+                min-width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
