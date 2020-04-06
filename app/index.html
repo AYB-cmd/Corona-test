@@ -5,22 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corona test</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+    <!-- ::::::::::::::::::::::::::::::::::::::::::::://section start here\\::::::::::::::::::::::::::::::::::::::::::::: -->
     <header>
         <nav>
             <div class="bg">
                 <div class="banner">
                     <a class="logo" href=""><img src="./img/logo.png" alt=""></a>
                     <ul class="menu">
-                        <li class="menu__items"><a href="#">Conseil</i>
+                        <li class="menu__items"><a href="./html/conseil.html">Conseil</i>
                         <li class="menu__items"><a href="#">َAccueil</a></li>
 
-                        <li class="menu__items"><a href="#" id="arabic">عربي <i class="fas fa-globe " style="color: $yellow; padding-left:16px;"></i> </a></li>
+                        <li class="menu__items"><a href="#" class="arabic">عربي<i class="fas fa-globe "></i> </a></li>
                     </ul>
                 </div>
             </div>
@@ -66,6 +68,8 @@
             </div>
         </div>
     </header>
+    <!-- ::::::::::::::::::::::::::::::::::::::::::::://section start here\\::::::::::::::::::::::::::::::::::::::::::::: -->
+
     <section class="symptomes">
         <div class="title">
             <h1>Quels sont les symptômes à surveiller ?</h1>
@@ -111,36 +115,40 @@
                     corporelle et recherchez un avis médical. <br>
                 </h2>
             </div>
-            <div class="items">
+            <div class="items" id="appelle">
                 <p class="items__win">Apple Gratuit</p>
                 <p class="items__nmr">080 100 47 47</p>
                 <a class="items__link" href="">www.sante.gov.ma</a>
             </div>
         </div>
-        <div class="block-bot">
-            <h1 class="block-bot__title">
-                Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?
-            </h1>
-            <img class="block-bot__icon" src="img/sick.png" alt="">
-            <button class="block-bot__btn">
-                Demarer le test
-            </button>
+        <div class="container">
+            <div class="block-bot">
+                <h1 class="block-bot__title">
+                    Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?
+                </h1>
+                <img class="block-bot__icon" src="img/sick.png" alt="">
+                <button class="block-bot__btn">
+                    Demarer le test
+                </button>
+            </div>
         </div>
     </section>
+    <!-- ::::::::::::::::::::::::::::::::::::::::::::://section start here\\::::::::::::::::::::::::::::::::::::::::::::: -->
+
     <section class="footer">
         <div class="logo"> <a href=""><img src="./img/logo.png" alt="" class="logo__img"> </a></div>
         <div class="content">
             <ul class="categories-1">
-                <li class="categories-1__items"><a href="">FRAN</a></li>
+                <li class="categories-1__items"><a href="" class="arabic">العربية<i class="fas fa-globe "></i></a></li>
                 <li class="categories-1__items"><a href="">Accueil</a></li>
                 <li class="categories-1__items"><a href="">Conseil</a></li>
             </ul>
             <ul class="categories-2">
-                <li class="categories-2__items--title">Contact utiles</li>
+                <li class="categories-2__items categories-2__items--title">Contact utiles</li>
                 <li class="categories-2__items">Chiffre économique "Alo épidémie vigilance"</li>
-                <li class="categories-2__items--nmr">080 100 47 47</li>
+                <li class="categories-2__items categories-2__items--nmr">080 100 47 47</li>
                 <li class="categories-2__items">Aide médicale urgente</li>
-                <li class="categories-2__items--nmr">114</li>
+                <li class="categories-2__items categories-2__items--nmr">114</li>
             </ul>
             <p class="discreption">Algorithme d'orientation mis à jour sur les recommandations en vigueur
                 au 22/03/2020 à 16h15. Ce site d’information n’est pas un dispositif médical,
@@ -149,7 +157,6 @@
         </div>
         <div class="bg"></div>
     </section>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/solid.min.js"></script>
     <script src="/dist/js/script.js"></script>

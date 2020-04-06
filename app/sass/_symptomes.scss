@@ -4,11 +4,13 @@
         padding-top: 8em;
     }
     .block {
+        flex-wrap: wrap;
         padding-top: 8em;
         display: flex;
         justify-content: space-evenly;
         &__items {
-            width: 20%;
+            max-width: 327px;
+            min-width: 327px;
             height: auto;
             text-align: center;
             &--img {

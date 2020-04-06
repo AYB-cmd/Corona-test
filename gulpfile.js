@@ -6,11 +6,14 @@ var gulp = require("gulp"),
     jshint = require('gulp-jshint'),
     imagemin = require('gulp-imagemin'),
     connect = require('gulp-connect'),
-    rename = require("gulp-rename");
+    useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    minifyCss = require('gulp-clean-css');
  
 
 gulp.task("html", () => {
-    return gulp.src('./app/*.html')
+    return gulp.src('./app/html/*.html')
     .pipe(rename('index.html'))
     .pipe(gulp.dest("./dist"))
     .pipe(connect.reload())

@@ -8,24 +8,35 @@ body {
                 color: $light;
             }
         }
+
         .block-top {
-            justify-content: space-around;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
             width: 90%;
-            margin: 0 auto;
+
             .items {
-                padding-top: 4em;
+                text-align: center;
+
                 &__text {
                     text-align: left;
                     font-size: 30px;
+                    font-weight: 600;
+                    letter-spacing: -1px;
                     &--color {
                         color: black;
                     }
+                    @include breakpoint(laptop) {
+                        text-align: center;
+                    }
                 }
                 &__win {
+                    margin: 0;
                     color: $yellow;
                 }
                 &__nmr {
+                    margin: 0 auto;
                     border-radius: 10px;
                     width: 240px;
                     background-color: $yellow;
@@ -35,29 +46,49 @@ body {
                 &__link {
                     font-size: 27px;
                     color: white;
-                    text-decoration: none ;
+                    text-decoration: none;
                     border-bottom: solid 1px $yellow;
                 }
+                @include breakpoint(laptop) {
+                    padding: 0 0 2em 0;
+                }
             }
-        }
-        .block-bot {
-            display: flex;
-            flex-direction: column;
-            background-color: $blue;
-            text-align: center;
-            &__title {
-                
+            #appelle {
+                padding: 9%;
+                @include breakpoint(laptop) {
+                    padding: 0 0 2em 0;
+                }
+            }
+            @include breakpoint(laptop) {
                 text-align: center;
             }
-            &__icon {
+            @include breakpoint(laptop) {
+                flex-direction: column;
                 margin: 0 auto;
-                height: 100px;
-                 width: auto;
-                 padding-bottom: 2em;
             }
-            &__btn {
-                margin: 0 auto 0.5em auto;
-                @include btn;
+        }
+        .container {
+            background-color: $blue;
+            .block-bot {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                width: 80%;
+                margin: 0 auto;
+                &__title {
+                    text-align: center;
+                }
+                &__icon {
+                    margin: 0 auto;
+                    height: 100px;
+                    width: auto;
+                    padding-bottom: 2em;
+                }
+                &__btn {
+                    width: 75%;
+                    margin: 0 auto 0.5em auto;
+                    @include btn;
+                }
             }
         }
     }
