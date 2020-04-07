@@ -1,0 +1,28 @@
+.transmet {
+    text-align: center;
+    .title {
+        padding-top: 8em;
+    }
+    .block {
+        flex-wrap: wrap;
+        padding-top: 8em;
+        display: flex;
+        justify-content: space-evenly;
+        &__items {
+            max-width: 327px;
+            min-width: 327px;
+            height: auto;
+            text-align: center;
+            &--img {
+                height: 50%;
+                width: auto;
+            }
+            &--title {
+                width: 98%;
+                margin: 0 auto 1EM auto;
+                font-size: 26px;
+                color: $dark-blue;
+            }
+        }
+    }
+}

@@ -5,16 +5,40 @@ var gulp = require("gulp"),
     uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
     imagemin = require('gulp-imagemin'),
-    connect = require('gulp-connect'),
+    connect = require('gulp-connect');
+    html = require('gulp-rename'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
-    uglify = require('gulp-uglify'),
-    minifyCss = require('gulp-clean-css');
- 
+    autoprefixer = require('autoprefixer'),
+    inject = require('gulp-inject'),
+    useref = require('gulp-useref'),
+    postcss = require('postcss'),
+    htmlmin = require('gulp-htmlmin');
+    
+// gulp.task('useref', () => {
+//     var prefix = [
+//         autoprefixer({
+//             browsers: 'last 10 version'
+//         }),
+//     wring
+//     ];
+
+//     return gulp.src('app/*.html')
+//     .pipe(useref())
+//     .pipe(htmlmin({
+//         collapseWhitespace: treu
+//     }))
+//     .pipe(gulfif('script.js',uglify()))
+//     .pipe(gulpif('*.css',postcss(prefix)))
+//     .pipe(gulp.src('./app/conseil.html'))
+//     .pipe(inject(gulf.src(['./dist/css/*.css'])))
+//     .pipe(gulp.dest('./dist'))
+// })
 
 gulp.task("html", () => {
-    return gulp.src('./app/html/*.html')
-    .pipe(rename('index.html'))
+    return gulp.src('./app/*.html')
+    // .pipe(inject(['./dist/css/*.css']))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./dist"))
     .pipe(connect.reload())
 })
@@ -38,7 +62,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('images', () => {
-    return gulp.src('app/img/*')
+    return gulp.src('app/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/img'))
         .pipe(connect.reload())

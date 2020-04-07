@@ -1,0 +1,41 @@
+.info {
+    background: $light;
+    text-align: center;
+    .banner {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        .left-side {
+            width: 40%;
+            &__title {
+                font-size: 40px;
+            }
+            &__description {
+                max-width: 490px;
+                color: $dark-blue;
+                font-size: 25px;
+            }
+        }
+        .right-side {
+            width: 60%;
+            min-height: 277px;
+
+            .layer {
+                padding: 12em;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                text-align: center;
+                .right-side__btn {
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: white;
+                    background-color: $multi-blue;
+                    border-radius: 5px;
+                    font-size: 17px;
+                    padding: 15px 23px;
+                }
+            }
+        }
+    }
+}
