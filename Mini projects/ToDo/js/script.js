@@ -1,15 +1,37 @@
-// // var block = document.getElementById('block');
-// // var title = document.getElementById('title');
-// // var card = document.getElementById('card');
-// // var todo =  document.getElementById('ToDO');
 
-// var item = document.createElement('li');
-// item.textContent = 'its working'
+var list = document.querySelector('ul');
+var userInput = document.querySelector('#input');
+var form = document.querySelector('form');
+var btn = document.querySelector('button');
 
-// var list = document.querySelector('ul');
-// list.appendChild(item)
-// while (let i == 2, i > 1 ) {
-//     i--
-//     list.removeChild(list.firstChild)
-// }
+
+
+btn.addEventListener('click',() => {
+    
+    while (i = 2, i > 1 ) {
+        i--
+        list.removeChild(list.firstChild)
+    }
+    return list
+});
+
+
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    todoMaker(userInput.value)
+    userInput.value = ''
+})
+
+var todoMaker = function(text) {
+    var todo = document.createElement('li')
+    todo.textContent = text;
+    list.appendChild(todo)
+}
+
+
+
+
+
+
 
