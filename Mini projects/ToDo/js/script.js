@@ -8,8 +8,7 @@ var btn = document.querySelector('button');
 
 btn.addEventListener('click',() => {
     
-    while (i = 2, i > 1 ) {
-        i--
+    while (list.firstChild) {
         list.removeChild(list.firstChild)
     }
     return list

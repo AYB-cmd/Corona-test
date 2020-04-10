@@ -66,6 +66,7 @@ form {
 #input::placeholder {
     font-size: 16px;
     opacity: 0.6;
+    padding: 20px;
 }
 
 .list {
