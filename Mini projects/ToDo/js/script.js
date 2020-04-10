@@ -3,23 +3,19 @@ var list = document.querySelector('ul');
 var userInput = document.querySelector('#input');
 var form = document.querySelector('form');
 var btn = document.querySelector('button');
+var todoArrey = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
 
 
+localStorage.setItem('todos',JSON.stringify(todoArrey));
 
-btn.addEventListener('click',() => {
-    
-    while (list.firstChild) {
-        list.removeChild(list.firstChild)
-    }
-    return list
-});
-
-
+var storage = JSON.parse(localStorage.getItem('todos'));
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    todoMaker(userInput.value)
-    userInput.value = ''
+    todoArrey.push(userInput.value);
+    localStorage.setItem('todos',JSON.stringify(todoArrey));
+    todoMaker(userInput.value);
+    userInput.value = "";
 })
 
 var todoMaker = function(text) {
@@ -28,6 +24,17 @@ var todoMaker = function(text) {
     list.appendChild(todo)
 }
 
+for (let i = 0; i < storage.length; i++ ) {
+    
+    todoMaker(storage[i]);
+}
+
+btn.addEventListener('click',() => {
+    window.localStorage.clear();
+    while (list.firstChild) {
+        list.removeChild(list.firstChild)
+    }
+});
 
 
 
