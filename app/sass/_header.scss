@@ -12,7 +12,8 @@ body {
             // background:url(../img/coronavirus-virus.png);
             background-size: cover;
             .banner {
-                display: table;
+                display: flex;
+                flex-direction: row-reverse;
                 
                 
                 margin: 0 auto;
