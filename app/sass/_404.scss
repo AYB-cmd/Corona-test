@@ -1,0 +1,22 @@
+.error {
+    .container {
+        width: 70%;
+        padding-top: 15em;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .bot {
+        width: 100%;
+        text-align: center;
+        &--btn {
+            width: 75%;
+            margin: 0 auto 0.5em auto;
+            @include btn;
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+
