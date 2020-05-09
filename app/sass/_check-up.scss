@@ -1,0 +1,67 @@
+.test {
+    position: relative;
+    padding: 116px 0 10em 0;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    .progressAria {
+        text-align: center;
+        margin-bottom: 5em;
+        width: 70%;
+        margin: 0 auto 5em auto;
+        .setups {
+            width: 70%;
+            position: absolute;
+            top: 112px;
+            display: flex;
+            justify-content: space-between;
+            span {
+                border: 8px solid $multi-blue;
+                border-radius: 50%;
+            }
+        }
+        .titles {
+            width: 75%;
+            left: 12%;
+            position: absolute;
+            top: 112px;
+            display: flex;
+            justify-content: space-between;
+            h1 {
+                margin-top: 1.5em;
+                font-size: 14px;
+                color: black;
+            }
+        }
+    }
+    .contentAria {
+        margin-top: 10em;
+        background-color: $blue;
+        height: 50%;
+        width: 100;
+        padding: 1em 42px;
+        border-radius: 15px;
+        .title {
+        }
+        .text {
+            font-size: 20px;
+            font-weight: 500;
+            span {
+                width: 40%;
+                border: 2px solid yellow;
+            }
+        }
+    }
+    .bottonAria {
+        width: 40%;
+        margin: 0 auto;
+        .btn {
+            width: 60%;
+            margin: 0 auto 0.5em auto;
+            @include btn;
+            a {
+                color: white;
+            }
+        }
+    }
+}
