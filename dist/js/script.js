@@ -70,31 +70,48 @@ const questionner = [
     },
 
 
-]
+];
 
 
 
-
+var btnAria = document.getElementById('bot');
 var contentAria = document.getElementById('terminal');
 var progress = document.getElementById('progress');
 var start = document.getElementById('start');
-var score = document.querySelector('.index');
+var Nmr = document.querySelector('.index');
 var question = document.querySelector('.question');
 var reponse = document.querySelector('.reponse');
 
 counter = -1;
 
+
+start.addEventListener('click', startTest)
+
 function startTest() {
-    progressBar();
+    progressBarP();
     getQst()
     getRps()
-
     style();
+    startBtnChanges()
+}
 
+function questionNmrP() {
+    Nmr.innerHTML = `${counter + 1}/23`;
+}
+function progressBarP() {
+    if (counter <= 0) {
+        progress.style.width = '50%';
+    } if (counter + 1 >= 1 & counter + 1 <= 22 ) {
+        progress.style.width = `${50 + (50 / 21) * counter}%`;
+    }if (counter > 20){
+       start.removeEventListener('click', startTest);
+    }
+    counter++;
+    questionNmrP()
 }
 
 function getQst() {
-    if (counter == 0) {
+    if (counter >= 0) {
         question.innerHTML = '';
         var Q = document.createElement('h2');
         Q.textContent = questionner[counter].Q;
@@ -102,6 +119,7 @@ function getQst() {
     }
 
 }
+
 function getRps() {
     if (counter == 0) {
         reponse.innerHTML = '';
@@ -132,23 +150,65 @@ function getRps() {
 
 }
 
-function questionNmr() {
-    score.innerHTML = `${counter + 1}/23`;
-}
-function progressBar() {
-    if (counter <= 0) {
-        progress.style.width = '50%';
-    } if (counter + 1 >= 1 & counter + 1 <= 22 ) {
-        progress.style.width = `${50 + (50 / 21) * counter}%`;
-    }if (counter > 20){
-       start.removeEventListener('click', startTest);
-    }
-    counter++;
-    questionNmr()
-}
-
 function style() {
     contentAria.style.backgroundColor = '#FFF'
 }
-start.addEventListener('click', startTest)
+
+function startBtnChanges() {
+    if (counter == 0) {
+        btnAria.style.width = '100%';
+        btnAria.style.display = 'flex';
+        btnAria.style.justifyContent = 'flex-end';
+        start.textContent = 'question suivante';
+        start.style.width = '45%';
+        start.style.margin = '1em 0';
+        
+    }if (counter == 1) {
+        btnAria.style.flexDirection = "row-reverse"
+        btnAria.style.justifyContent = 'space-between';
+        var btn = document.createElement('button');
+        btn.setAttribute('class' ,'btn')
+        btn.setAttribute('id','backBtn')
+        btn.textContent = "question d'avant";
+        btn.style.width = '45%';
+        btn.style.margin = '1em 0';
+        btnAria.appendChild(btn);
+        
+        
+    }
+return btn;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function questionNmrN() {
+//     Nmr.innerHTML = `${counter - 1}/23`;
+// }
+// function progressBarN() {
+//      if (counter + 1 >= 1 & counter + 1  <= 22 ) {
+//         progress.style.width = `${50 - (50 / 21) * counter}%`;
+//     }if (counter < 1 || counter > 22){
+//        btn.removeEventListener('click', Back());
+//     }
+//     counter++;
+//     questionNmrN()
+// }
+// function back() {
+//     progressBarN()
+//     getQst()
+//     getRps()
+//     style();
+//     startBtnChanges()
+// }
+// btn.addEventListener('click',back())
 
