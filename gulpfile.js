@@ -60,9 +60,9 @@ gulp.task("sass", () => {
 
 gulp.task('scripts', () => {
     return gulp.src('./app/js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(uglify())
+        // .pipe(jshint())
+        // .pipe(jshint.reporter('default',))
+        // .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
         .pipe(connect.reload())
 });

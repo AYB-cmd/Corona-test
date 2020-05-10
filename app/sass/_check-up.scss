@@ -42,13 +42,25 @@
         padding: 1em 42px;
         border-radius: 15px;
         .title {
+            margin: 8px auto 16px auto;
         }
-        .text {
-            font-size: 20px;
-            font-weight: 500;
-            span {
-                width: 40%;
-                border: 2px solid yellow;
+        .question {
+            h2 {
+                margin-top: 0.5em;
+                font-size: 41px;
+                font-weight: bold;
+                color: #787878;
+            }
+
+            .text {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .line {
+                margin: 16px auto;
+                width: 60%;
+                border-bottom: 2px solid yellow;
             }
         }
     }
@@ -59,6 +71,10 @@
             width: 60%;
             margin: 0 auto 0.5em auto;
             @include btn;
+            &:active {
+                color: black;
+                background-color: white;
+            }
             a {
                 color: white;
             }
