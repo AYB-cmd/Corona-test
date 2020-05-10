@@ -1,34 +1,44 @@
 const questionner = [
     {
         "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
-        "element": ["label" , "label"],
-        "text" : ["NON","OUI"],
-        "input" : "input",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
         "type": "radio",
-        "value": [1 ,  2 ],
+        "value": [1, 2],
         "name": "Q1",
-        "R" : ""
-        },
-        {
-            "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
-            "element": ["label" , "label"],
-            "text" : ["NON","OUI"],
-            "input" : "input",
-            "type": "radio",
-            "value": [1 ,  2 ],
-            "name": "Q1",
-            "R" : ""
-            },
-            {
-                "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
-                "element": ["label" , "label"],
-                "text" : ["NON","OUI"],
-                "input" : "input",
-                "type": "radio",
-                "value": [1 ,  2 ],
-                "name": "Q1",
-                "R" : ""
-                },
+        "R": []
+    },
+    {
+        "Q": "Que pensez-vous de votre corps?",
+        "element": ["label", "label", "label", "label"],
+        "text": ["Bien", "Fatigue", "Moyen", "trop fatigue"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2, 1, 1],
+        "name": "Q2",
+        "R": ""
+    },
+    {
+        "Q": " Quel est votre âge ? Ceci, afin de calculerun facteur de risque spécifique. ",
+        "element": ["label" ],
+        "text": ["Ans"],
+        "input": "input",
+        "type": "text",
+        "value": [],
+        "name": "Q3",
+        "R": ""
+    },
+    {
+        "Q": " Lgana hahowa  ",
+        "element": ["label", ],
+        "text": ["Ans"],
+        "input": "input",
+        "type": "text",
+        "value": [],
+        "name": "Q3",
+        "R": ""
+    },
 
 
 ];
@@ -59,6 +69,7 @@ backBtn.addEventListener('click', back)
 
 
 function startTest() {
+
     counter++
     questionNmrP()
     progressBarP();
@@ -141,21 +152,21 @@ function postQst() {
 }
 
 function postRps() {
-    reponse.innerHTML = ''; 
+    reponse.innerHTML = '';
     for (let i = 0; i < questionner[counter].element.length; i++) {
         var q = questionner[counter];
-        var rps =document.createElement(questionner[counter].element[i]) ;
+        var rps = document.createElement(questionner[counter].element[i]);
         rps.textContent = questionner[counter].text[i];
         reponse.appendChild(rps);
-        reponse.lastChild.setAttribute('id',`${i}`);
+        reponse.lastChild.setAttribute('id', `${i}`);
         var selected = document.getElementById(`${i}`);
-        var  r = document.createElement(questionner[counter].input);
+        var r = document.createElement(questionner[counter].input);
         r.type = q.type;
         r.value = q.value;
         r.name = q.name;
         selected.appendChild(r);
     }
-    
+
 }
 
 

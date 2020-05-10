@@ -67,7 +67,7 @@
     }
     .bottonAria {
         width: 80%;
-       margin: 0 auto;
+        margin: 0 auto;
         .bot {
             .btn {
                 width: 60%;
@@ -91,9 +91,13 @@
         font-size: 28px;
         font-weight: 100;
         color: #787878;
-        input {
-            margin: 2em 1em;
+        flex-wrap: wrap;
+        label {
+            color: #1078AD;
+            width: 40%;
+            input {
+                margin: 2em 1em;
+            }
         }
     }
 }
-
