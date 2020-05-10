@@ -74,10 +74,12 @@ const questionner = [
 
 
 
-var btnAria = document.getElementById('bot');
+
 var contentAria = document.getElementById('terminal');
 var progress = document.getElementById('progress');
-var start = document.getElementById('start');
+var btnAria = document.getElementById('bot');
+var startBtn = document.getElementById('start');
+var backBtn =document.getElementById('backBtn');
 var Nmr = document.querySelector('.index');
 var question = document.querySelector('.question');
 var reponse = document.querySelector('.reponse');
@@ -85,30 +87,51 @@ var reponse = document.querySelector('.reponse');
 counter = -1;
 
 
-start.addEventListener('click', startTest)
+startBtn.addEventListener('click', startTest)
+backBtn.addEventListener('click', back)
+
 
 function startTest() {
+    counter++
+    questionNmrP()
     progressBarP();
-    getQst()
-    getRps()
+    getQst();
+    getRps();
     style();
-    startBtnChanges()
+    BtnChanges();
+    
+}
+function back() { 
+    counter--; 
+    questionNmrP();
+    progressBarP();
+    getQst();
+    getRps(); 
+      
 }
 
 function questionNmrP() {
     Nmr.innerHTML = `${counter + 1}/23`;
 }
 function progressBarP() {
-    if (counter <= 0) {
+
+
+
+    if (counter + 1 <= 1) {
         progress.style.width = '50%';
-    } if (counter + 1 >= 1 & counter + 1 <= 22 ) {
-        progress.style.width = `${50 + (50 / 21) * counter}%`;
-    }if (counter > 20){
-       start.removeEventListener('click', startTest);
     }
-    counter++;
-    questionNmrP()
+        
+    if(counter == 0){
+        backBtn.style.display = 'none'
+    }if (counter >= 1 & counter  <= 22 ) {
+        progress.style.width = `${50 + (50 / 22) * counter}%`;
+    }if (counter >= 22){
+       startBtn.removeEventListener('click', startTest);
+    }
 }
+
+
+
 
 function getQst() {
     if (counter >= 0) {
@@ -117,7 +140,6 @@ function getQst() {
         Q.textContent = questionner[counter].Q;
         question.appendChild(Q);
     }
-
 }
 
 function getRps() {
@@ -144,71 +166,35 @@ function getRps() {
         R2.type = 'radio';
         R2.name = "Q1"
         label2.appendChild(R2);
-
-       
     } 
-
 }
 
 function style() {
     contentAria.style.backgroundColor = '#FFF'
 }
 
-function startBtnChanges() {
+function BtnChanges() {
     if (counter == 0) {
         btnAria.style.width = '100%';
         btnAria.style.display = 'flex';
         btnAria.style.justifyContent = 'flex-end';
-        start.textContent = 'question suivante';
-        start.style.width = '45%';
-        start.style.margin = '1em 0';
-        
+        startBtn.type = 'submit'
+        startBtn.textContent = 'question suivante';
+        startBtn.style.width = '45%';
+        startBtn.style.margin = '1em 0';
     }if (counter == 1) {
         btnAria.style.flexDirection = "row-reverse"
         btnAria.style.justifyContent = 'space-between';
-        var btn = document.createElement('button');
-        btn.setAttribute('class' ,'btn')
-        btn.setAttribute('id','backBtn')
-        btn.textContent = "question d'avant";
-        btn.style.width = '45%';
-        btn.style.margin = '1em 0';
-        btnAria.appendChild(btn);
+        backBtn.textContent = "question d'avant";
+        backBtn.style.display = 'block';
+        btnAria.appendChild(backBtn);
         
         
     }
-return btn;
+    
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-// function questionNmrN() {
-//     Nmr.innerHTML = `${counter - 1}/23`;
-// }
-// function progressBarN() {
-//      if (counter + 1 >= 1 & counter + 1  <= 22 ) {
-//         progress.style.width = `${50 - (50 / 21) * counter}%`;
-//     }if (counter < 1 || counter > 22){
-//        btn.removeEventListener('click', Back());
-//     }
-//     counter++;
-//     questionNmrN()
-// }
-// function back() {
-//     progressBarN()
-//     getQst()
-//     getRps()
-//     style();
-//     startBtnChanges()
-// }
-// btn.addEventListener('click',back())
 
