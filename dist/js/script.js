@@ -1,76 +1,39 @@
 const questionner = [
     {
         "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
-        "input1": 0,
-        "input2": 1
-    },
-    {
-        "Q": "Que pensez-vous de votre corps?"
-    },
-    {
-        "Q": " Quel est votre âge ? Ceci, afin de calculerun facteur de risque spécifique. "
-    },
-    {
-        "Q": ""
-    }, {
-        "Q": ""
-    }, {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
-    {
-        "Q": ""
-    },
+        "element": ["label" , "label"],
+        "text" : ["NON","OUI"],
+        "input" : "input",
+        "type": "radio",
+        "value": [1 ,  2 ],
+        "name": "Q1",
+        "R" : ""
+        },
+        {
+            "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+            "element": ["label" , "label"],
+            "text" : ["NON","OUI"],
+            "input" : "input",
+            "type": "radio",
+            "value": [1 ,  2 ],
+            "name": "Q1",
+            "R" : ""
+            },
+            {
+                "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+                "element": ["label" , "label"],
+                "text" : ["NON","OUI"],
+                "input" : "input",
+                "type": "radio",
+                "value": [1 ,  2 ],
+                "name": "Q1",
+                "R" : ""
+                },
 
 
 ];
+
+
 
 
 
@@ -79,14 +42,18 @@ var contentAria = document.getElementById('terminal');
 var progress = document.getElementById('progress');
 var btnAria = document.getElementById('bot');
 var startBtn = document.getElementById('start');
-var backBtn =document.getElementById('backBtn');
+var backBtn = document.getElementById('backBtn');
 var Nmr = document.querySelector('.index');
 var question = document.querySelector('.question');
 var reponse = document.querySelector('.reponse');
 
+
+
+
+
 counter = -1;
 
-
+// buttons
 startBtn.addEventListener('click', startTest)
 backBtn.addEventListener('click', back)
 
@@ -95,19 +62,18 @@ function startTest() {
     counter++
     questionNmrP()
     progressBarP();
-    getQst();
-    getRps();
+    postQst();
+    postRps();
     style();
     BtnChanges();
-    
+
 }
-function back() { 
-    counter--; 
+function back() {
+    counter--;
     questionNmrP();
     progressBarP();
-    getQst();
-    getRps(); 
-      
+    postQst();
+    postRps();
 }
 
 function questionNmrP() {
@@ -117,57 +83,27 @@ function progressBarP() {
 
 
 
-    if (counter + 1 <= 1) {
+    if (counter <= 0) {
         progress.style.width = '50%';
     }
-        
-    if(counter == 0){
-        backBtn.style.display = 'none'
-    }if (counter >= 1 & counter  <= 22 ) {
-        progress.style.width = `${50 + (50 / 22) * counter}%`;
-    }if (counter >= 22){
-       startBtn.removeEventListener('click', startTest);
-    }
-}
-
-
-
-
-function getQst() {
-    if (counter >= 0) {
-        question.innerHTML = '';
-        var Q = document.createElement('h2');
-        Q.textContent = questionner[counter].Q;
-        question.appendChild(Q);
-    }
-}
-
-function getRps() {
     if (counter == 0) {
-        reponse.innerHTML = '';
-        var label = document.createElement('label');
-        label.setAttribute('class', 'label1')
-        label.textContent = "NON"
-        reponse.appendChild(label);
-        var label1 = document.querySelector('.label1');
-        var R1 = document.createElement('input');
-        R1.value = questionner[counter].input1;
-        R1.type = 'radio';
-        R1.name = "Q1"
-        label1.appendChild(R1);
-
-        var label = document.createElement('label');
-        label.setAttribute('class', 'label2')
-        label.textContent = "OUI"
-        reponse.appendChild(label);
-        var label2 = document.querySelector('.label2');
-        var R2 = document.createElement('input');
-        R2.value = questionner[counter].input1;
-        R2.type = 'radio';
-        R2.name = "Q1"
-        label2.appendChild(R2);
-    } 
+        backBtn.style.display = 'none'
+    } if (counter >= 1 & counter <= 22) {
+        progress.style.width = `${50 + (50 / 22) * counter}%`;
+    } if (counter >= 22) {
+        startBtn.removeEventListener('click', startTest);
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 function style() {
     contentAria.style.backgroundColor = '#FFF'
@@ -182,18 +118,45 @@ function BtnChanges() {
         startBtn.textContent = 'question suivante';
         startBtn.style.width = '45%';
         startBtn.style.margin = '1em 0';
-    }if (counter == 1) {
+    } if (counter == 1) {
         btnAria.style.flexDirection = "row-reverse"
         btnAria.style.justifyContent = 'space-between';
         backBtn.textContent = "question d'avant";
         backBtn.style.display = 'block';
         btnAria.appendChild(backBtn);
-        
-        
+
+    }
+
+}
+
+// postINFO
+
+function postQst() {
+    if (counter >= 0) {
+        question.innerHTML = '';
+        var Q = document.createElement('h2');
+        Q.textContent = questionner[counter].Q;
+        question.appendChild(Q);
+    }
+}
+
+function postRps() {
+    reponse.innerHTML = ''; 
+    for (let i = 0; i < questionner[counter].element.length; i++) {
+        var q = questionner[counter];
+        var rps =document.createElement(questionner[counter].element[i]) ;
+        rps.textContent = questionner[counter].text[i];
+        reponse.appendChild(rps);
+        reponse.lastChild.setAttribute('id',`${i}`);
+        var selected = document.getElementById(`${i}`);
+        var  r = document.createElement(questionner[counter].input);
+        r.type = q.type;
+        r.value = q.value;
+        r.name = q.name;
+        selected.appendChild(r);
     }
     
 }
-
 
 
 
