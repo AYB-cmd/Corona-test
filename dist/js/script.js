@@ -47,16 +47,25 @@ const questionner = [
 
 
 
-
+var inpt = document.querySelectorAll('input')
 var contentAria = document.getElementById('terminal');
 var progress = document.getElementById('progress');
 var btnAria = document.getElementById('bot');
 var startBtn = document.getElementById('start');
 var backBtn = document.getElementById('backBtn');
 var Nmr = document.querySelector('.index');
-var question = document.querySelector('.question');
+var question = document.querySelector('question');
 var reponse = document.querySelector('.reponse');
 var counter = -1;
+
+question.textContent
+
+function plus(nmrOne,nmrTwo) {
+    nmrOne + nmrTwo
+}
+
+plus()
+
 
 
 // buttons
@@ -64,47 +73,50 @@ startBtn.addEventListener('click', startTest)
 backBtn.addEventListener('click', back)
 
 
+// function Form(e) {
+//     var r = document.getElementsByTagName('input')
+//     if (counter >= 0) {
+//         startBtn.setAttribute('form', 'FORM')
 
+//         e.preventDefualt();  
+//     }
 
-// var form_being_submitted = false; // global variable
-
-// function checkForm(form)
-// {
-//   if(form.firstname.value == "") {
-//     alert("Please enter your first and last names");
-//     form.firstname.focus();
-//     return false;
-//   }
-//   return true;
 // }
 
+// function getReponse(){
+//     inpt.forEach(element => {
+//         if (element.checked == true) {
+//             var n = element.value
+//             result.push(n)
+//             return result;
 
-
-
-
-
-function Form(e) {
-    var r = document.getElementsByTagName('input')
-    if (counter >= 0) {
-        startBtn.setAttribute('form', 'FORM')
-       
-        e.preventDefualt();  
-    }
-    
-}
+//         }
+//     }, counter--);
+// }
 
 function startTest() {
-
-
-    Form()
     counter++
+    
     questionNmrP()
     progressBarP();
     postQst();
     postRps();
     style();
     BtnChanges();
+    getRps()
+    // startBtn.addEventListener('click',Next)
+    // startBtn.removeEventListener('click',startTest)
 }
+// function Next() {
+
+//     counter++
+//     questionNmrP()
+//     progressBarP();
+//     postQst();
+//     postRps();
+//     style();
+//     BtnChanges();
+// }
 function back() {
     counter--;
     questionNmrP();
@@ -188,10 +200,25 @@ function postRps() {
         var selected = document.getElementById(`${i}`);
         var r = document.createElement(questionner[counter].input);
         r.type = q.type;
-        r.value = q.value;
+        r.value= q.value[i] ;
         r.name = q.name;
         r.required = true
         selected.appendChild(r);
     }
 
 }
+
+var result = [];
+
+    function getRps() {
+        for (let i = 0; i < inpt.length; i++) {
+            const element = inpt[i];
+            if (element.checked) {
+            var m = element.value;
+                result.push(m)
+            }   
+        }
+    }
+
+
+
