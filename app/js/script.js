@@ -1,84 +1,197 @@
 const questionner = [
     {
         "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
-        "input1": 0,
-        "input2": 1
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q1",
+        "R": []
     },
     {
-        "Q": ""
-    }
+        "Q": "Que pensez-vous de votre corps?",
+        "element": ["label", "label", "label", "label"],
+        "text": ["Bien", "Fatigue", "Moyen", "trop fatigue"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2, 1, 1],
+        "name": "Q2",
+        "R": ""
+    },
+    {
+        "Q": " Quel est votre âge ? Ceci, afin de calculerun facteur de risque spécifique. ",
+        "element": ["label"],
+        "text": ["Ans"],
+        "input": "input",
+        "type": "text",
+        "value": [],
+        "name": "Q3",
+        "R": ""
+    },
+    {
+        "Q": " Lgana hahowa  ",
+        "element": ["label",],
+        "text": ["Ans"],
+        "input": "input",
+        "type": "text",
+        "value": [],
+        "name": "Q3",
+        "R": ""
+    },
 
 
-]
+];
+
+
 
 
 
 
 var contentAria = document.getElementById('terminal');
 var progress = document.getElementById('progress');
-var start = document.getElementById('start');
-var score = document.querySelector('.index');
+var btnAria = document.getElementById('bot');
+var startBtn = document.getElementById('start');
+var backBtn = document.getElementById('backBtn');
+var Nmr = document.querySelector('.index');
 var question = document.querySelector('.question');
 var reponse = document.querySelector('.reponse');
+var counter = -1;
 
-counter = 0;
-questionNmbr = 0
+
+// buttons
+startBtn.addEventListener('click', startTest)
+backBtn.addEventListener('click', back)
+
+
+
+
+// var form_being_submitted = false; // global variable
+
+// function checkForm(form)
+// {
+//   if(form.firstname.value == "") {
+//     alert("Please enter your first and last names");
+//     form.firstname.focus();
+//     return false;
+//   }
+//   return true;
+// }
+
+
+
+
+
+
+function Form(e) {
+    var r = document.getElementsByTagName('input')
+    if (counter >= 0) {
+        startBtn.setAttribute('form', 'FORM')
+       
+        e.preventDefualt();  
+    }
+    
+}
+
 function startTest() {
-    if (counter > 0) {
-        document.getElementById("myForm").submit();
-    }
 
-    getQst()
-    getRps()
-    progressBar();
+
+    Form()
+    counter++
+    questionNmrP()
+    progressBarP();
+    postQst();
+    postRps();
     style();
-
+    BtnChanges();
+}
+function back() {
+    counter--;
+    questionNmrP();
+    progressBarP();
+    postQst();
+    postRps();
 }
 
-function getQst() {
-    score.innerHTML = `${counter}/23`;
-    question.innerHTML = '';
-    var Q = document.createElement('h2');
-    Q.textContent = questionner[0].Q;
-    question.appendChild(Q);
+function questionNmrP() {
+    Nmr.innerHTML = `${counter + 1}/23`;
 }
-function getRps() {
-    reponse.innerHTML = '';
-    var label = document.createElement('label')
-    label.textContent = "NON"
-    reponse.appendChild(label);
-    var R1 = document.createElement('input');
-    R1.value = questionner[0].input1;
-    R1.type = 'radio';
-    reponse.appendChild(R1);
-    var label = document.createElement('label')
-    label.textContent = "OUI"
-    reponse.appendChild(label);
-    var R2 = document.createElement('input');
-    R2.value = questionner[0].input2;
-    R2.type = 'radio';
-    reponse.appendChild(R2);
-    // var R2 = document.createElement('input');
-
-    // R2.value = questionner[0].input1;
-    // R2.type = 'checkbox';
-    // reponse.firstChild.appendChild(R1); 
-    // reponse.childElementCount(1).appendChild(R2);
-
-}
+function progressBarP() {
 
 
-function progressBar() {
-    if (counter == 0) {
+
+    if (counter <= 0) {
         progress.style.width = '50%';
-    } else {
-        progress.style.width = `${50 + (50 / 23) * counter}%`;
     }
-    counter++;
+    if (counter == 0) {
+        backBtn.style.display = 'none'
+    } if (counter >= 1 & counter <= 22) {
+        progress.style.width = `${50 + (50 / 22) * counter}%`;
+    } if (counter >= 22) {
+        startBtn.removeEventListener('click', startTest);
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 function style() {
     contentAria.style.backgroundColor = '#FFF'
 }
-start.addEventListener('click', startTest)
 
+function BtnChanges() {
+    if (counter == 0) {
+        btnAria.style.width = '100%';
+        btnAria.style.display = 'flex';
+        btnAria.style.justifyContent = 'flex-end';
+        startBtn.type = 'submit'
+        startBtn.textContent = 'question suivante';
+        startBtn.style.width = '45%';
+        startBtn.style.margin = '1em 0';
+    } if (counter == 1) {
+        btnAria.style.flexDirection = "row-reverse"
+        btnAria.style.justifyContent = 'space-between';
+        backBtn.textContent = "question d'avant";
+        backBtn.style.display = 'block';
+        btnAria.appendChild(backBtn);
+
+    }
+
+}
+
+// postINFO
+
+function postQst() {
+    if (counter >= 0) {
+        question.innerHTML = '';
+        var Q = document.createElement('h2');
+        Q.textContent = questionner[counter].Q;
+        question.appendChild(Q);
+    }
+}
+
+function postRps() {
+    reponse.innerHTML = '';
+    for (let i = 0; i < questionner[counter].element.length; i++) {
+        var q = questionner[counter];
+        var rps = document.createElement(questionner[counter].element[i]);
+        rps.textContent = questionner[counter].text[i];
+        reponse.appendChild(rps);
+        reponse.lastChild.setAttribute('id', `${i}`);
+        var selected = document.getElementById(`${i}`);
+        var r = document.createElement(questionner[counter].input);
+        r.type = q.type;
+        r.value = q.value;
+        r.name = q.name;
+        r.required = true
+        selected.appendChild(r);
+    }
+
+}

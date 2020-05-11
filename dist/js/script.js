@@ -21,7 +21,7 @@ const questionner = [
     },
     {
         "Q": " Quel est votre âge ? Ceci, afin de calculerun facteur de risque spécifique. ",
-        "element": ["label" ],
+        "element": ["label"],
         "text": ["Ans"],
         "input": "input",
         "type": "text",
@@ -31,7 +31,7 @@ const questionner = [
     },
     {
         "Q": " Lgana hahowa  ",
-        "element": ["label", ],
+        "element": ["label",],
         "text": ["Ans"],
         "input": "input",
         "type": "text",
@@ -56,20 +56,47 @@ var backBtn = document.getElementById('backBtn');
 var Nmr = document.querySelector('.index');
 var question = document.querySelector('.question');
 var reponse = document.querySelector('.reponse');
+var counter = -1;
 
-
-
-
-
-counter = -1;
 
 // buttons
 startBtn.addEventListener('click', startTest)
 backBtn.addEventListener('click', back)
 
 
+
+
+// var form_being_submitted = false; // global variable
+
+// function checkForm(form)
+// {
+//   if(form.firstname.value == "") {
+//     alert("Please enter your first and last names");
+//     form.firstname.focus();
+//     return false;
+//   }
+//   return true;
+// }
+
+
+
+
+
+
+function Form(e) {
+    var r = document.getElementsByTagName('input')
+    if (counter >= 0) {
+        startBtn.setAttribute('form', 'FORM')
+       
+        e.preventDefualt();  
+    }
+    
+}
+
 function startTest() {
 
+
+    Form()
     counter++
     questionNmrP()
     progressBarP();
@@ -77,7 +104,6 @@ function startTest() {
     postRps();
     style();
     BtnChanges();
-
 }
 function back() {
     counter--;
@@ -164,11 +190,8 @@ function postRps() {
         r.type = q.type;
         r.value = q.value;
         r.name = q.name;
+        r.required = true
         selected.appendChild(r);
     }
 
 }
-
-
-
-
