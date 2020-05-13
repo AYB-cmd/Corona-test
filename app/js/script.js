@@ -15,7 +15,7 @@ const questionner = [
         "text": ["age"],
         "input": "input",
         "type": "text",
-        "value": " ",
+        "value": ' ',
         "name": "Q0",
         "R": []
     },
@@ -38,6 +38,177 @@ const questionner = [
         "value": [1, 2, 1, 1],
         "name": "Q1",
         "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
+    },   {
+        "Q": "Pensez-vous avoir ou avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?",
+        "element": ["label", "label"],
+        "text": ["NON", "OUI"],
+        "input": "input",
+        "type": "radio",
+        "value": [1, 2],
+        "name": "Q0",
+        "R": []
     },
 ];
 
@@ -58,15 +229,32 @@ backBtn.addEventListener('click', back)
 reponse.addEventListener('submit',e =>{e.preventDefault()})
 
 function startTest() {
-    getRps()
-    counter++
-    questionNmrP();
-    progressBarP();
-    postQst();
-    postRps();
-    style();
-    BtnChanges();
+    if(counter >= -1 & counter <= 22){
+        getRps()
+        counter++
+        questionNmrP();
+        progressBarP();
+        postQst();
+        postRps();
+        style();
+        BtnChanges();
+    }
+    // if(counter >= 22{
+
+    // }
+   
 };
+
+// function isNumberKey(g){
+    
+//          var charCode = (evt.which) ? evt.which : event.keyCode
+//          if (charCode > 31 && (charCode < 48 || charCode > 57))
+//             return false;
+
+//          return true;
+     
+// }
+      
 
 function getRps() {
     if (counter >= 0) {
@@ -78,16 +266,10 @@ function getRps() {
                 var m = element.value;
                 r.push(m);
             }
-        }if (r.length == 0){
+        }if (r.length == 0 || r[0] === " "){
             counter--
+            r.pop()
             var q = questionner[counter];
-            if(q.type == 'radio'){
-                alert('you have to select one')
-            }
-            // }else{
-            //     alert('you have to fill it')
-            // }
-            
         }
     }
 };
@@ -98,6 +280,7 @@ function back() {
     progressBarP();
     postQst();
     postRps();
+    questionner[counter].R.pop()
 }
 
 function questionNmrP() {
